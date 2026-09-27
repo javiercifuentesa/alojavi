@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javier Cifuentes Avendaño — GTM Engineering para SaaS B2B</title>
+<meta name="description" content="GTM Engineer independiente. Diseño la infraestructura de datos, agentes de IA y orquestación que convierte el go-to-market de una SaaS B2B en un sistema, no en una lista de tareas manuales. España y LATAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">alojavi<em>.</em></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#metodo">Método</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#casos">Casos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#insights">Insights</a>
+      <!-- <a href="#cta" class="btn btn-solid">Agenda una llamada</a> -->
+      <a href="https://calendly.com/alojavi" class="btn btn-solid nav-cta-desktop">Agenda una llamada</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-3d-container" id="hero3dContainer" aria-hidden="true">
+    <canvas id="hero3dCanvas"></canvas>
+    <div class="hero-hud-telemetry">
+      <span><span class="hud-dot"></span>GTM PIPELINE ENGINE 3D · ONLINE</span>
+      <span class="hud-dim">LATENCIA: 12ms</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow hero-reveal"><span>GTM Engineering para SaaS B2B</span></div>
+        <h1 class="hero-reveal">El go-to-market no es una lista de tareas.<span class="line2">Es infraestructura. Yo la diseño.</span></h1>
+        <p class="lead hero-reveal">Soy <strong>Javier Cifuentes Avendaño</strong>, Business Engineer para SaaS B2B en España y LATAM. No vendo horas de prospección: diseño workflows, agentes IA y la orquestación que convierten tu go-to-market en un sistema que corre solo. 15 años de criterio comercial con C-Levels involucrado en cada paso estratégico en el desarrollo del negocio.</p>
+        <div class="hero-ctas hero-reveal">
+          <a href="https://calendly.com/alojavi" class="btn btn-solid">Agenda una llamada</a>
+          <a href="#recurso" class="btn btn-line">Descarga la auditoría expres</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ledger-stats">
+      <div class="ledger-row"><div class="num">€250K+</div><div class="desc">Pipeline comercial generado en un solo año para una SaaS de ciberseguridad</div></div>
+      <div class="ledger-row"><div class="num">−40%</div><div class="desc">Tiempo de cualificación de leads tras automatizar el proceso con n8n + IA</div></div>
+      <div class="ledger-row"><div class="num">20+</div><div class="desc"><strong>Reuniones mensuales</strong> recurrentes con CISOs y directores de TI</div></div>
+      <div class="ledger-row"><div class="num">15 años</div><div class="desc">Cerrando acuerdos B2B con decisores C-Level en dos continentes</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="stack-strip">
+  <div class="wrap stack-inner">
+    <span>HubSpot</span><span>Salesforce</span><span>n8n</span><span>Apollo</span><span>Sales Navigator</span><span>Python</span><span>Agentes IA</span><span>REST APIs</span><span>MEDDICC</span>
+  </div>
+</div>
+
+<!-- ============ PROBLEMA ============ -->
+<section id="problema">
+  <div class="wrap">
+    <div class="problem-header-layout">
+      <div class="problem-header-text">
+        <div class="eyebrow"><span class="idx">01</span><span>El problema</span></div>
+        <h2 class="h-section">Tu GTM no tiene un problema de gente. Tiene un problema de arquitectura.</h2>
+        <p class="sub">La mayoría de empresas SaaS en España y LATAM intentan resolver el go-to-market contratando más SDRs y más herramientas para un proceso que nunca fue diseñado como sistema. El resultado: herramientas sueltas sin integración, datos que no se hablan entre sí y tareas que se acumulan día tras día sin que nadie sepa realmente qué está pasando.</p>
+      </div>
+
+      <div class="problem-visual-wrap">
+        <div class="arch-card" id="archCardVisual">
+          <div class="arch-card-header">
+            <span class="arch-tag"><span class="arch-dot"></span>SYS.DIAGNOSTIC // SILOS AISLADOS</span>
+            <span class="arch-status">DATA LOSS DETECTED</span>
+          </div>
+          <div class="arch-media">
+            <img src="./gtm-broken-architecture.jpg" alt="Arquitectura GTM desconectada con herramientas sin integración y fuga de datos" class="arch-img" width="1024" height="768" loading="lazy">
+            <div class="arch-scanline"></div>
+            <div class="arch-glow-leak"></div>
+            
+            <!-- Telemetry Pin 1: Pipeline roto -->
+            <div class="arch-pin pin-leak">
+              <span class="pin-pulse"></span>
+              <span class="pin-beacon"></span>
+              <div class="pin-tooltip pin-tooltip-leak">
+                <span class="pin-code">ERR_01 // LEAK</span>
+                <strong>Pipeline fracturado</strong>
+                <small>Fuga de datos entre HubSpot y CRM</small>
+              </div>
+            </div>
+
+            <!-- Telemetry Pin 2: Herramientas sueltas -->
+            <div class="arch-pin pin-silo">
+              <span class="pin-pulse"></span>
+              <span class="pin-beacon"></span>
+              <div class="pin-tooltip">
+                <span class="pin-code">ERR_02 // SILO</span>
+                <strong>Silo desconectado</strong>
+                <small>Sin sincronización con CRM</small>
+              </div>
+            </div>
+
+            <!-- Telemetry Pin 3: Ruptura central -->
+            <div class="arch-pin pin-break">
+              <span class="pin-pulse"></span>
+              <span class="pin-beacon"></span>
+              <div class="pin-tooltip">
+                <span class="pin-code">ERR_03 // ARCH</span>
+                <strong>Fallo de arquitectura</strong>
+                <small>Proceso no diseñado como sistema</small>
+              </div>
+            </div>
+          </div>
+          <div class="arch-card-footer">
+            <span class="arch-meta"><strong>ESTADO ACTUAL:</strong> 4 herramientas aisladas · 0 capa común</span>
+            <span class="arch-indicator">CRÍTICO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card"><div class="tag">Headcount</div><h3>No escala, se reemplaza</h3><p>Un SDR cuesta 30.000–40.000 €/año, tardando 4-6 meses en ser realmente productivo y se va a los 12-18 meses de media. El conocimiento del proceso se va con la persona, no queda en un sistema.</p></div>
+      <div class="problem-card"><div class="tag">Agencia de leads</div><h3>Caja negra alquilada</h3><p>Ejecutan secuencias de plantilla genérica, sin estrategia, sin hiperpersonalización ni criterio comercial, sin exponer la lógica detrás. Cuando dejas de pagar, no te queda infraestructura, te queda una factura.</p></div>
+      <div class="problem-card"><div class="tag">Stack sin arquitecto</div><h3>Herramientas desconectadas</h3><p>No hay un sistema, sino: Apollo por aquí, HubSpot por allá, un CSV cruzado con otro CSV, Claude u otro LLM por aquí o por allá... Tienes las piezas de un motor GTM, pero nadie las ha conectado con una lógica común.</p></div>
+    </div>
+
+    <div class="compare">
+      <div class="comp-col old">
+        <h4>GTM como lista de tareas</h4>
+        <ul>
+          <li>Cada canal se opera por separado, sin una capa de datos común</li>
+          <li>Cualificación manual que consume horas del equipo</li>
+          <li>El proceso vive en la cabeza de quien lo ejecuta</li>
+          <li>Decisiones comerciales basadas en intuición</li>
+        </ul>
+      </div>
+      <div class="comp-col new">
+        <h4>GTM como infraestructura</h4>
+        <ul>
+          <li>Una capa de datos que enriquece y prioriza antes de cualquier contacto</li>
+          <li>Agentes de IA que cualifican y ejecutan según reglas, no según el día</li>
+          <li>Un sistema documentado que es propiedad de tu empresa, no del proveedor</li>
+          <li>Orquestación visible: cada acción trazable hasta el resultado que produjo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO ============ -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">02</span><span>El método propietario</span></div>
+    <h2 class="h-section">Método M.A.Q.U.I.N.A.</h2>
+    <p class="sub">7 fases organizadas en 4 capas de infraestructura GTM: datos, agentes, orquestación y ejecución. Convierten un go-to-market manual y disperso en un sistema que opera por su cuenta, el mismo que usan empresas referentes como Notion, Perk, Make, entre otras.</p>
+
+    <div class="rail">
+      <div class="rail-step" data-letter="M"><div class="rail-head"><h3>Mapping</h3><span>Capa de datos · Semana 1</span></div><p><strong>Auditoría completa del motor comercial:</strong> funnel actual, pipeline, ARR, CAC, LTV e ICP real, no el que dice la web y los puntos exactos donde se escapa el dinero.</p></div>
+      <div class="rail-step" data-letter="Á"><div class="rail-head"><h3>Architecture</h3><span>Capa de datos · Semana 1-2</span></div><p><strong>Diseño del sistema de datos:</strong> fuentes, enriquecimiento, señales de compra y taxonomía del ICP. Sin cimientos de datos, cualquier automatización es spam con buen diseño.</p></div>
+      <div class="rail-step" data-letter="Q"><div class="rail-head"><h3>Qualification</h3><span>Capa de agentes · Semana 2-3</span></div><p><strong>Scoring automático con criterio MEDDICC:</strong> cada lead entra, se enriquece y se puntúa. Tu equipo solo habla con quien cumple el umbral de calidad.</p></div>
+      <div class="rail-step" data-letter="U"><div class="rail-head"><h3>Unification</h3><span>Capa de orquestación · Semana 3-4</span></div><p><strong>Secuencias multicanal orquestadas:</strong> email y LinkedIn sincronizados, con lógica de ramas según comportamiento. Un solo criterio, todos los canales.</p></div>
+      <div class="rail-step" data-letter="I"><div class="rail-head"><h3>Intelligence</h3><span>Capa de agentes · Semana 4</span></div><p><strong>Agentes IA que personalizan a escala:</strong> cada mensaje referencia la realidad concreta del prospecto. Personalización de SDR senior a coste marginal casi nulo.</p></div>
+      <div class="rail-step" data-letter="N"><div class="rail-head"><h3>Nurturing</h3><span>Capa de orquestación · Continuo</span></div><p><strong>Lo que no compra hoy no se pierde:</strong> nurturing automatizado por segmento que mantiene tu marca presente hasta que aparece la señal de compra.</p></div>
+      <div class="rail-step" data-letter="A"><div class="rail-head"><h3>Analytics</h3><span>Capa de ejecución · Continuo</span></div><p><strong>Paneles vivos y optimización semanal:</strong> de "creo que funciona" a "este mensaje genera un 34% más de SQLs que este otro". Decisiones con datos, siempre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">03</span><span>Servicios</span></div>
+    <h2 class="h-section">Tres formas de traer un GTM Engineer a tu equipo</h2>
+    <p class="sub">No es una suscripción a una herramienta ni un contrato de agencia. Es acceso a la persona que diseña, construye y mantiene tu infraestructura GTM. Es un proceso, empiezas de a poco, ves el diagnóstico, y escalamos solo si los números lo justifican.</p>
+
+    <div class="services">
+      <div class="service-row">
+        <div class="idx">01</div>
+        <div>
+          <h3>Auditoría de Infraestructura GTM</h3>
+          <div class="for">Para founders y CROs que quieren claridad antes de invertir</div>
+          <p class="desc">Diagnóstico de tu arquitectura GTM actual —capa de datos, agentes, orquestación— con roadmap priorizado y costeado. Entregable cerrado en 2-3 semanas.</p>
+        </div>
+        <ul>
+          <li>Análisis de funnel, ICP y unit economics</li>
+          <li>Mapa de los puntos de fuga de ingresos</li>
+          <li>Roadmap de automatización priorizado por ROI</li>
+          <li>Sesión estratégica con tu equipo</li>
+        </ul>
+        <div class="price-col"><small>Desde</small><div class="price">900 €</div><small>por proyecto</small><div class="cta"><a href="https://calendly.com/alojavi" class="btn btn-line">Solicitar auditoría</a></div></div>
+      </div>
+
+      <div class="service-row featured">
+        <div class="idx">02</div>
+        <div>
+          <h3>Build · Sistema GTM</h3>
+          <div class="for">Para SaaS B2B que necesitan infraestructura de ingresos, no otro SDR</div>
+          <p class="desc">Diseño y construcción del sistema completo con el Método M.Á.Q.U.I.N.A.: de cero a infraestructura generando reuniones en 4-6 semanas.</p>
+        </div>
+        <ul>
+          <li>Arquitectura de datos, enriquecimiento y señales</li>
+          <li>Scoring y cualificación MQL→SQL automatizada</li>
+          <li>Secuencias multicanal con personalización IA</li>
+          <li>Sincronización total con tu CRM</li>
+          <li>Documentación y formación de tu equipo</li>
+        </ul>
+        <div class="price-col"><small>Desde</small><div class="price">4.900 €</div><small>por proyecto</small><div class="cta"><a href="https://calendly.com/alojavi" class="btn btn-solid">Quiero mi motor</a></div></div>
+      </div>
+
+      <div class="service-row">
+        <div class="idx">03</div>
+        <div>
+          <h3>Copilot Retainer</h3>
+          <div class="for">Para equipos que quieren su GTM Engineer en modo continuo</div>
+          <p class="desc">Operación y evolución continua del sistema: monitorización, nuevos agentes, optimización semanal y reporting ejecutivo.</p>
+        </div>
+        <ul>
+          <li>Monitorización y mantenimiento del sistema</li>
+          <li>Nuevas campañas y segmentos cada mes</li>
+          <li>Optimización continua basada en datos</li>
+          <li>Panel ejecutivo y llamada mensual</li>
+        </ul>
+        <div class="price-col"><small>Desde</small><div class="price">2.000 €</div><small>al mes</small><div class="cta"><a href="https://calendly.com/alojavi" class="btn btn-line">Hablemos del retainer</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS ============ -->
+<section id="casos">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">04</span><span>Resultados, no promesas</span></div>
+    <h2 class="h-section">Sistemas que ya funcionan en producción</h2>
+    <p class="sub">Cada métrica pertenece a un entorno real donde he construido, operado o dirigido el proceso comercial.</p>
+
+    <div class="case-table">
+      <div class="case-row">
+        <div class="co"><h3>Tranxfer</h3><span>Ciberseguridad SaaS · España</span></div>
+        <div class="metric">€250K+<small>nuevo pipeline en un año</small></div>
+        <p>Prospección técnica y cualificación sobre grandes cuentas de Finance, Retail y Tecnología. 50+ acuerdos cualificados con decisores C-Level y un proceso estandarizado que elevó la conversión a reunión un 20%.</p>
+      </div>
+      <div class="case-row">
+        <div class="co"><h3>Camel Secure</h3><span>Ciberseguridad SaaS · Chile / LATAM</span></div>
+        <div class="metric">20+<small>reuniones mensuales con CISOs</small></div>
+        <p>Motor de generación de demanda de ciclo completo que expandió el volumen de oportunidades un 30%. Los playbooks diseñados allí fueron adoptados por todo el equipo comercial.</p>
+      </div>
+      <div class="case-row">
+        <div class="co"><h3>BigHit</h3><span>Consultoría GTM · España</span></div>
+        <div class="metric">−40%<small>tiempo de cualificación</small></div>
+        <p>Mi propio laboratorio: workflows n8n integrados vía API con HubSpot, estrategias inbound/outbound basadas en datos y un +20% medio en adquisición de clientes para la cartera asesorada.</p>
+      </div>
+      <div class="case-row">
+        <div class="co"><h3>Nexo Plus</h3><span>Cloud &amp; SAP Partner · Chile</span></div>
+        <div class="metric">€100K+<small>ARR por contrato cerrado</small></div>
+        <p>Ciclo completo de ventas corporativas para soluciones Cloud, Ciberseguridad y SAP: desde la demo técnica con C-Level hasta el cierre y el hand-off a implementación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section id="sobre-mi">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">05</span><span>Quién construye tu sistema</span></div>
+    <h2 class="h-section">Business Engineer. Con 15 años de criterio comercial dentro del código.</h2>
+
+    <div class="about-grid">
+      <div class="about-mark">
+        <img class="profile-photo" src="./profilePhoto-javierCifuentes.jpeg" alt="Javier Cifuentes" />
+        <div class="about-mark-footer">
+          <a href="https://www.linkedin.com/in/javiercifuentesa" target="_blank" rel="noopener" class="btn-linkedin-gold" aria-label="Perfil profesional de Javier Cifuentes en LinkedIn">
+            <svg class="icon-linkedin" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            <span>Conectemos</span>
+            <span class="btn-arrow">↗</span>
+          </a>
+          <div class="loc">Zaragoza, España<br>Remoto — España &amp; LATAM</div>
+        </div>
+      </div>
+      <div class="about-txt">
+        <h3>La mayoría de los que automatizan nunca han presentado a un C-Level su propuesta de valor. La mayoría de los vendedores B2B no saben qué es una API. Yo diseño la arquitectura comercial que hace que los sistemas funcionen.</h3>
+        <p>Empecé gestionando carteras corporativas de más de <strong>2 M€ anuales en Nextel, Vtr-Liberty Global y Scotiabank</strong>, donde aprendí cómo se toma realmente una decisión de compra. Después lideré ventas B2B de ciberseguridad y cloud en España y LATAM, ese criterio es el que hoy convierto en reglas, scoring y lógica de agentes.</p>
+        <p>Me formé como <strong>ingeniero en administración especializado en Marketing y Gestión Comercial (Universidad Mayor, Chile)</strong>, donde paralelamente estudie y complete el <strong>Certificado Profesional de Consultor en Modelos de Negocios (Universidad de Salamanca, España)</strong>, asi como también el <strong>Diplomado en Python y Data Science (Universidad Autonoma de Chile)</strong>, generando proyectos con: <strong>Python, SQL, APIs y orquestación con n8n</strong>. Además, para especializarme internacionalmente en <strong>Investigación de Mercados y Comercialización</strong>, tengo un <strong>Máster Universitario en Dirección, Estrategia y Marketing (Universidad de Zaragoza, España)</strong>.</p>
+        <p>Hoy en día, esto es un GTM Engineer, no es saber operar una herramienta de IA, sino diseñar la arquitectura de flujos de datos y agentes que saben a quién contactar, cuándo y cómo, sin depender de que alguien lo haga a mano cada día. El sistema que te propongo es literalmente el que uso para construir mi propia infraestructura de clientes.</p>
+        <!-- <div class="timeline">
+          <span>Scotiabank · KAM</span><span>Nexo Plus · AE</span><span>Camel Secure · BD</span><span>Tranxfer · BD</span><span>Endalia · BD</span><span>Máster Unizar</span>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD MAGNET ============ -->
+<section id="recurso">
+  <div class="wrap">
+    <div class="lead-box">
+      <div class="lead-copy">
+        <div class="eyebrow"><span>Recurso gratuito</span></div>
+        <h3>Los puntos donde tu prospección está perdiendo dinero</h3>
+        <p>La checklist exacta que uso en mis auditorías de 900 €, condensada en un diagnóstico que puedes aplicar a tu empresa en 20 minutos.</p>
+        <ul>
+          <li>El test de 5 preguntas para saber si tu ICP es real o imaginario</li>
+          <li>Los cuellos de botella de cualificación que más ingresos destruyen</li>
+          <li>Qué delegar a la máquina y qué no delegar jamás</li>
+        </ul>
+      </div>
+      <form class="lead-form" onsubmit="event.preventDefault();this.innerHTML='&lt;h4 style=&quot;color:var(--accent)&quot;&gt;Recurso en camino&lt;/h4&gt;&lt;p&gt;Revisa tu bandeja: te llegará en menos de 2 minutos. (Y sí — este flujo también es un workflow de n8n. Estás viendo la demo.)&lt;/p&gt;'">
+        <h4>Descárgalo gratis</h4>
+        <p>Sin spam. Recibirás el recurso y, solo si encaja, una idea concreta aplicable a tu caso.</p>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Email corporativo" required>
+        <input type="text" placeholder="Empresa">
+        <button class="btn btn-solid" type="submit">Enviarme la auditoría</button>
+        <div class="micro">RGPD compliant · tus datos son tuyos</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section id="insights">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">06</span><span>Insights</span></div>
+    <h2 class="h-section">Lo que aprendo construyendo, lo publico</h2>
+    <p class="sub">Análisis sin filtro sobre ventas B2B, automatización e IA aplicada a los ingresos.</p>
+
+    <div class="posts">
+      <div class="post-row"><div class="n">01</div><div><h3>Cómo cualificar leads con lógica MEDDICC automatizada en n8n</h3><p>El workflow completo: del formulario al lead puntuado en HubSpot sin tocar una celda de Excel.</p></div><div class="cat">Automatización</div></div>
+      <div class="post-row"><div class="n">02</div><div><h3>Por qué tus secuencias de cold email fracasan antes del primer envío</h3><p>El 80% del resultado se decide en la arquitectura de datos. Cómo construirla bien.</p></div><div class="cat">Outbound</div></div>
+      <div class="post-row"><div class="n">03</div><div><h3>20 reuniones al mes con CISOs: anatomía de un motor de demanda en LATAM</h3><p>Desglose completo del sistema que operé en ciberseguridad: stack, mensajes y números reales.</p></div><div class="cat">Caso real</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">07</span><span>Preguntas frecuentes</span></div>
+    <h2 class="h-section">Antes de que lo preguntes</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">¿En qué te diferencias de una agencia de generación de leads?<span class="mark">+</span></button><div class="faq-a"><p>Una agencia opera una caja negra: te alquila resultados y, cuando dejas de pagar, no te queda infraestructura. Un GTM Engineer diseña un sistema que es tuyo — los workflows, los datos y la lógica de agentes quedan documentados dentro de tu empresa. Y a diferencia de quien solo sabe automatizar, he cerrado contratos enterprise durante 15 años: sé qué reglas debe seguir el sistema para que tu equipo comercial no odie lo que le llega.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Cuánto tiempo hasta ver resultados?<span class="mark">+</span></button><div class="faq-a"><p>La auditoría entrega claridad accionable en 2-3 semanas. Un build completo está generando conversaciones en 4-6 semanas, y los primeros datos estadísticamente significativos llegan hacia la semana 8-10. El outbound es un sistema, no un interruptor.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Trabajas con empresas fuera de España?<span class="mark">+</span></button><div class="faq-a"><p>Sí. He operado comercialmente en Chile, México y el resto de LATAM durante años, y conozco las particularidades de cada mercado: ciclos de decisión, cultura de negocio y qué mensajes funcionan en cada región. Trabajo en remoto desde Zaragoza con solapamiento horario total.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Qué necesito tener para empezar?<span class="mark">+</span></button><div class="faq-a"><p>Un producto con encaje mínimo de mercado (algunos clientes que ya paguen), un CRM aunque sea básico, y alguien que pueda atender las reuniones que el sistema genere. Si aún estás en fase pre-encaje, la auditoría te dirá qué construir primero.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Y si ya tenemos equipo de ventas?<span class="mark">+</span></button><div class="faq-a"><p>Mejor. El sistema no sustituye a tus vendedores: les devuelve las horas semanales que pierden en prospección manual, para que las inviertan en lo que una máquina no puede hacer — escuchar, negociar y cerrar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final-cta" id="cta">
+  <div class="wrap">
+    <div class="eyebrow"><span>Siguiente paso</span></div>
+    <h2>¿Hablamos de tu infraestructura GTM?</h2>
+    <p>30 minutos. Sin pitch comercial: analizamos tu arquitectura actual, te digo con honestidad si puedo ayudarte, y te llevas al menos una idea accionable aunque no trabajemos juntos.</p>
+    <div class="hero-ctas">
+      <a href="https://calendly.com/alojavi" target="_blank" rel="noopener" class="btn btn-solid">Agenda tu llamada estratégica</a>
+      <a href="https://www.linkedin.com/in/javiercifuentesa" target="_blank" rel="noopener" class="btn btn-line">Conecta en LinkedIn</a>
+    </div>
+    <div class="micro">Respuesta en menos de 24h · Zaragoza, España · Disponible para España &amp; LATAM</div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo">alojavi<em>.</em></a>
+        <p>GTM Engineer independiente para empresas SaaS B2B en España y LATAM. Diseño la infraestructura de datos, agentes y orquestación que hace crecer los ingresos mientras tú haces crecer el producto.</p>
+      </div>
+      <div><h5>Navegación</h5><ul><li><a href="#metodo">Método M.Á.Q.U.I.N.A.</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#casos">Casos de éxito</a></li><li><a href="#insights">Insights</a></li></ul></div>
+      <div><h5>Servicios</h5><ul><li><a href="#servicios">Auditoría Revenue Engine</a></li><li><a href="#servicios">Build · Motor Outbound</a></li><li><a href="#servicios">Copilot Retainer</a></li><li><a href="#recurso">Recurso gratuito</a></li></ul></div>
+      <div><h5>Contacto</h5><ul><li><a href="mailto:[EMAIL_ADDRESS]">hola@bighit.es</a></li><li><a href="https://www.linkedin.com/in/javiercifuentesa" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://bighit.es" target="_blank" rel="noopener">BigHit · Consultora</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Javier Cifuentes · alojavi.com</span>
+      <span>Aviso legal · Privacidad · Cookies</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Three.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+// --- Menú móvil y acordeón FAQ ---
+const ham=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+ham.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a'),mark=item.querySelector('.mark');
+  q.addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.mark').textContent='+'});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';mark.textContent='–'}
+  });
+});
+
+// ============================================================================
+// --- 3D HERO WEBGL ENGINE: THE NEURAL PIPELINE MATRIX (Three.js) ---
+// ============================================================================
+(function initHero3D() {
+  const canvas = document.getElementById('hero3dCanvas');
+  const container = document.getElementById('hero3dContainer');
+  const heroSection = document.querySelector('.hero');
+  if (!canvas || !container || !heroSection) return;
+
+  // Comprobar preferencias de reducción de movimiento
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Comprobar si Three.js está disponible; si no, fallback a Canvas 2D
+  if (typeof THREE === 'undefined') {
+    initCanvas2DFallback(canvas, container);
+    return;
+  }
+
+  // Dimensiones del contenedor
+  let width = container.clientWidth || window.innerWidth;
+  let height = container.clientHeight || 650;
+
+  // Escena, Cámara y Renderizador
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0E1A24, 0.0016);
+
+  const camera = new THREE.PerspectiveCamera(52, width / height, 1, 1200);
+  camera.position.z = 320;
+
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    alpha: true,
+    antialias: true,
+    powerPreference: 'high-performance'
+  });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+  // Grupo principal para rotación y traslación
+  const matrixGroup = new THREE.Group();
+  scene.add(matrixGroup);
+
+  // Ajustar posición del grupo según pantalla
+  function updateGroupOffset() {
+    const isDesktop = window.innerWidth > 900;
+    // Esfera Saturno más centrada horizontalmente y elevada a la altura del h1/h2 del hero
+    matrixGroup.position.x = isDesktop ? 26 : 0;
+    matrixGroup.position.y = isDesktop ? 54 : 42;
+  }
+  updateGroupOffset();
+
+  // --- Generador de texturas procedurales (sin depender de imágenes externas) ---
+  function createParticleTexture() {
+    const size = 64;
+    const c = document.createElement('canvas');
+    c.width = size;
+    c.height = size;
+    const ctx = c.getContext('2d');
+    const rad = size / 2;
+    const grad = ctx.createRadialGradient(rad, rad, 0, rad, rad, rad);
+    grad.addColorStop(0, 'rgba(255, 250, 225, 1)');
+    grad.addColorStop(0.18, 'rgba(240, 185, 80, 0.95)');
+    grad.addColorStop(0.48, 'rgba(232, 163, 61, 0.35)');
+    grad.addColorStop(1, 'rgba(14, 26, 36, 0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, size, size);
+    return new THREE.CanvasTexture(c);
+  }
+
+  function createTextSprite(text, isAccent) {
+    const c = document.createElement('canvas');
+    c.width = 280;
+    c.height = 70;
+    const ctx = c.getContext('2d');
+
+    // Fondo cápsula HUD
+    ctx.fillStyle = isAccent ? 'rgba(232, 163, 61, 0.16)' : 'rgba(20, 36, 51, 0.75)';
+    ctx.strokeStyle = isAccent ? 'rgba(232, 163, 61, 0.75)' : 'rgba(237, 231, 216, 0.32)';
+    ctx.lineWidth = 1.5;
+    
+    // Dibujar rectángulo redondeado
+    const r = 14, x = 4, y = 8, w = 272, h = 54;
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    // Punto LED
+    ctx.beginPath();
+    ctx.arc(26, y + h / 2, 4, 0, Math.PI * 2);
+    ctx.fillStyle = isAccent ? '#E8A33D' : '#8EE6A8';
+    ctx.fill();
+
+    // Tipografía
+    ctx.font = '600 20px "IBM Plex Mono", monospace';
+    ctx.fillStyle = isAccent ? '#FFFFFF' : '#EDE7D8';
+    ctx.fillText(text, 42, y + h / 2 + 7);
+
+    const texture = new THREE.CanvasTexture(c);
+    const spriteMat = new THREE.SpriteMaterial({
+      map: texture,
+      transparent: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending
+    });
+    const sprite = new THREE.Sprite(spriteMat);
+    sprite.scale.set(42, 11, 1);
+    return sprite;
+  }
+
+  const particleTexture = createParticleTexture();
+
+  // --- Creación de los Nodos 3D ---
+  const nodeCount = 135;
+  const nodes = [];
+  const positions = new Float32Array(nodeCount * 3);
+  const colors = new Float32Array(nodeCount * 3);
+  const sizes = new Float32Array(nodeCount);
+
+  const colorAccent = new THREE.Color(0xE8A33D);
+  const colorGoldLight = new THREE.Color(0xFFF0BD);
+  const colorDim = new THREE.Color(0x93A0AC);
+
+  const spreadX = 340;
+  const spreadY = 220;
+  const spreadZ = 240;
+
+  for (let i = 0; i < nodeCount; i++) {
+    // Distribución esférica-elíptica orgánica
+    const u = Math.random();
+    const v = Math.random();
+    const theta = u * 2.0 * Math.PI;
+    const phi = Math.acos(2.0 * v - 1.0);
+    const r = Math.cbrt(Math.random()) * 0.9 + 0.1;
+
+    const x = r * (spreadX / 2) * Math.sin(phi) * Math.cos(theta);
+    const y = r * (spreadY / 2) * Math.sin(phi) * Math.sin(theta);
+    const z = r * (spreadZ / 2) * Math.cos(phi);
+
+    positions[i * 3] = x;
+    positions[i * 3 + 1] = y;
+    positions[i * 3 + 2] = z;
+
+    // Velocidad de deriva armónica
+    const speed = 0.15;
+    nodes.push({
+      x, y, z,
+      vx: (Math.random() - 0.5) * speed,
+      vy: (Math.random() - 0.5) * speed,
+      vz: (Math.random() - 0.5) * speed,
+      baseSize: (i < 8) ? 22 : (Math.random() * 9 + 7),
+      isHub: (i < 8)
+    });
+
+    if (i < 8) {
+      colorGoldLight.toArray(colors, i * 3);
+      sizes[i] = 22;
+    } else if (Math.random() > 0.4) {
+      colorAccent.toArray(colors, i * 3);
+      sizes[i] = 12;
+    } else {
+      colorDim.toArray(colors, i * 3);
+      sizes[i] = 8;
+    }
+  }
+
+  const nodeGeometry = new THREE.BufferGeometry();
+  nodeGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  nodeGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  nodeGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+  const nodeMaterial = new THREE.PointsMaterial({
+    size: 14,
+    map: particleTexture,
+    vertexColors: true,
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    sizeAttenuation: true
+  });
+
+  const nodeSystem = new THREE.Points(nodeGeometry, nodeMaterial);
+  matrixGroup.add(nodeSystem);
+
+  // --- Líneas de Conexión Dinámicas (Red Vectorial) ---
+  const maxLines = 450;
+  const linePositions = new Float32Array(maxLines * 6);
+  const lineColors = new Float32Array(maxLines * 6);
+
+  const lineGeometry = new THREE.BufferGeometry();
+  lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+  lineGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
+
+  const lineMaterial = new THREE.LineBasicMaterial({
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.85,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    linewidth: 1
+  });
+
+  const lineSegments = new THREE.LineSegments(lineGeometry, lineMaterial);
+  matrixGroup.add(lineSegments);
+
+  // --- Paquetes de Datos de Alta Velocidad (Pulsos de Energía) ---
+  const packetCount = 14;
+  const packets = [];
+  const packetGeom = new THREE.BufferGeometry();
+  const packetPositions = new Float32Array(packetCount * 3);
+  packetGeom.setAttribute('position', new THREE.BufferAttribute(packetPositions, 3));
+
+  const packetMaterial = new THREE.PointsMaterial({
+    size: 20,
+    map: particleTexture,
+    color: 0xFFF5CD,
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+  });
+
+  const packetSystem = new THREE.Points(packetGeom, packetMaterial);
+  matrixGroup.add(packetSystem);
+
+  for (let i = 0; i < packetCount; i++) {
+    packets.push({
+      startIdx: Math.floor(Math.random() * nodeCount),
+      endIdx: Math.floor(Math.random() * nodeCount),
+      progress: Math.random(),
+      speed: 0.007 + Math.random() * 0.012
+    });
+  }
+
+  // --- Badges 3D de Arquitectura GTM (Hologramas del Stack) ---
+  const badgesData = [
+    { text: 'APOLLO.IO', nodeIdx: 0, isAccent: true },
+    { text: 'AGENTE IA', nodeIdx: 1, isAccent: true },
+    { text: 'HUBSPOT CRM', nodeIdx: 2, isAccent: false },
+    { text: 'SCORING IA', nodeIdx: 3, isAccent: true },
+    { text: 'MEDDICC FLOW', nodeIdx: 4, isAccent: false },
+    { text: 'N8N ENGINE', nodeIdx: 5, isAccent: false }
+  ];
+
+  const badges = badgesData.map(b => {
+    const sprite = createTextSprite(b.text, b.isAccent);
+    matrixGroup.add(sprite);
+    return { sprite, nodeIdx: b.nodeIdx };
+  });
+
+  // --- Núcleo Saturno 3D (Planeta Central con Anillos Planetarios) ---
+  const saturnGroup = new THREE.Group();
+  matrixGroup.add(saturnGroup);
+
+  // 1. Núcleo esférico interno (cálido y luminoso)
+  const coreInnerGeom = new THREE.SphereGeometry(15, 32, 32);
+  const coreInnerMat = new THREE.MeshBasicMaterial({
+    color: 0xFFF2C2,
+    transparent: true,
+    opacity: 0.72,
+    blending: THREE.AdditiveBlending
+  });
+  const coreInnerMesh = new THREE.Mesh(coreInnerGeom, coreInnerMat);
+  saturnGroup.add(coreInnerMesh);
+
+  // 2. Malla geométrica exterior (Wireframe de alta fidelidad)
+  const coreWireGeom = new THREE.SphereGeometry(18, 22, 22);
+  const coreWireMat = new THREE.MeshBasicMaterial({
+    color: 0xE8A33D,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.52,
+    blending: THREE.AdditiveBlending
+  });
+  const coreWireMesh = new THREE.Mesh(coreWireGeom, coreWireMat);
+  saturnGroup.add(coreWireMesh);
+
+  // 3. Anillos planetarios concéntricos estilo Saturno
+  // Anillo Principal interior
+  const ringInnerGeom = new THREE.TorusGeometry(32, 1.4, 16, 96);
+  const ringInnerMat = new THREE.MeshBasicMaterial({
+    color: 0xFFE082,
+    transparent: true,
+    opacity: 0.8,
+    blending: THREE.AdditiveBlending
+  });
+  const ringInner = new THREE.Mesh(ringInnerGeom, ringInnerMat);
+  ringInner.rotation.x = Math.PI * 0.36;
+  ringInner.rotation.y = Math.PI * 0.06;
+  saturnGroup.add(ringInner);
+
+  // Anillo exterior brillante (División Cassini)
+  const ringOuterGeom = new THREE.TorusGeometry(44, 1.0, 16, 96);
+  const ringOuterMat = new THREE.MeshBasicMaterial({
+    color: 0xE8A33D,
+    transparent: true,
+    opacity: 0.6,
+    blending: THREE.AdditiveBlending
+  });
+  const ringOuter = new THREE.Mesh(ringOuterGeom, ringOuterMat);
+  ringOuter.rotation.x = Math.PI * 0.36;
+  ringOuter.rotation.y = Math.PI * 0.06;
+  saturnGroup.add(ringOuter);
+
+  // Anillo halo difuso exterior
+  const ringHaloGeom = new THREE.TorusGeometry(56, 0.6, 12, 96);
+  const ringHaloMat = new THREE.MeshBasicMaterial({
+    color: 0xE8A33D,
+    transparent: true,
+    opacity: 0.28,
+    blending: THREE.AdditiveBlending
+  });
+  const ringHalo = new THREE.Mesh(ringHaloGeom, ringHaloMat);
+  ringHalo.rotation.x = Math.PI * 0.36;
+  ringHalo.rotation.y = Math.PI * 0.06;
+  saturnGroup.add(ringHalo);
+
+  // --- Mouse Parallax e Interacción con Lerp ---
+  let mouseX = 0, mouseY = 0;
+  let targetMouseX = 0, targetMouseY = 0;
+  let surgeSpeed = 1.0;
+  let targetSurgeSpeed = 1.0;
+
+  function onMouseMove(e) {
+    const rect = heroSection.getBoundingClientRect();
+    if (e.clientY < rect.bottom && e.clientY > rect.top - 100) {
+      targetMouseX = ((e.clientX - window.innerWidth / 2) / (window.innerWidth / 2));
+      targetMouseY = ((e.clientY - rect.top - rect.height / 2) / (rect.height / 2));
+    }
+  }
+  window.addEventListener('mousemove', onMouseMove, { passive: true });
+
+  // Acelerar la matriz cuando se interactúa con los CTAs
+  const ctas = heroSection.querySelectorAll('.btn-solid, .btn-line');
+  ctas.forEach(btn => {
+    btn.addEventListener('mouseenter', () => { targetSurgeSpeed = 2.6; });
+    btn.addEventListener('mouseleave', () => { targetSurgeSpeed = 1.0; });
+  });
+
+  // Resize handler
+  function onResize() {
+    width = container.clientWidth || window.innerWidth;
+    height = container.clientHeight || 650;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+    updateGroupOffset();
+  }
+  window.addEventListener('resize', onResize);
+
+  // Optimización de rendimiento con IntersectionObserver
+  let isVisible = true;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      isVisible = entry.isIntersecting;
+    });
+  }, { threshold: 0.05 });
+  observer.observe(heroSection);
+
+  // --- Bucle de Animación a 60 FPS ---
+  let clock = new THREE.Clock();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    if (!isVisible && !prefersReducedMotion) return;
+
+    const delta = clock.getDelta();
+    const time = clock.getElapsedTime();
+
+    // Lerp del ratón (suavidad inercial de alta gama)
+    mouseX += (targetMouseX - mouseX) * 0.045;
+    mouseY += (targetMouseY - mouseY) * 0.045;
+
+    // Lerp de aceleración
+    surgeSpeed += (targetSurgeSpeed - surgeSpeed) * 0.08;
+
+    // Rotación suave del ecosistema tridimensional
+    if (!prefersReducedMotion) {
+      matrixGroup.rotation.y = time * 0.05 * surgeSpeed + mouseX * 0.28;
+      matrixGroup.rotation.x = -mouseY * 0.22 + Math.sin(time * 0.3) * 0.04;
+      coreInnerMesh.rotation.y += 0.014 * surgeSpeed;
+      coreWireMesh.rotation.y -= 0.016 * surgeSpeed;
+      coreWireMesh.rotation.x += 0.009 * surgeSpeed;
+      ringInner.rotation.z += 0.006 * surgeSpeed;
+      ringOuter.rotation.z += 0.004 * surgeSpeed;
+      ringHalo.rotation.z += 0.003 * surgeSpeed;
+      saturnGroup.rotation.z = Math.sin(time * 0.25) * 0.06;
+    }
+
+    // Actualización de nodos y límites
+    const pos = nodeGeometry.attributes.position.array;
+    for (let i = 0; i < nodeCount; i++) {
+      const node = nodes[i];
+      if (!prefersReducedMotion) {
+        node.x += node.vx * surgeSpeed;
+        node.y += node.vy * surgeSpeed;
+        node.z += node.vz * surgeSpeed;
+
+        const bx = spreadX * 0.55;
+        const by = spreadY * 0.55;
+        const bz = spreadZ * 0.55;
+
+        if (node.x > bx || node.x < -bx) node.vx *= -1;
+        if (node.y > by || node.y < -by) node.vy *= -1;
+        if (node.z > bz || node.z < -bz) node.vz *= -1;
+      }
+
+      pos[i * 3] = node.x;
+      pos[i * 3 + 1] = node.y;
+      pos[i * 3 + 2] = node.z;
+    }
+    nodeGeometry.attributes.position.needsUpdate = true;
+
+    // Actualizar Badges para que sigan a sus nodos madre
+    for (let i = 0; i < badges.length; i++) {
+      const b = badges[i];
+      const targetNode = nodes[b.nodeIdx];
+      if (targetNode) {
+        b.sprite.position.set(targetNode.x, targetNode.y + 12, targetNode.z);
+      }
+    }
+
+    // Actualizar líneas tensoras de conexión (Grafo dinámico)
+    let lineIdx = 0;
+    const maxDistance = 78;
+    const lPos = lineGeometry.attributes.position.array;
+    const lCol = lineGeometry.attributes.color.array;
+
+    for (let i = 0; i < nodeCount && lineIdx < maxLines; i++) {
+      for (let j = i + 1; j < nodeCount && lineIdx < maxLines; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dz = nodes[i].z - nodes[j].z;
+        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+        if (dist < maxDistance) {
+          const alpha = 1.0 - (dist / maxDistance);
+          const i6 = lineIdx * 6;
+
+          lPos[i6] = nodes[i].x;
+          lPos[i6 + 1] = nodes[i].y;
+          lPos[i6 + 2] = nodes[i].z;
+
+          lPos[i6 + 3] = nodes[j].x;
+          lPos[i6 + 4] = nodes[j].y;
+          lPos[i6 + 5] = nodes[j].z;
+
+          // Gradiente de color según proximidad
+          const r = 0.91 * alpha;
+          const g = (0.64 + alpha * 0.2) * alpha;
+          const b = 0.24 * alpha;
+
+          lCol[i6] = r; lCol[i6 + 1] = g; lCol[i6 + 2] = b;
+          lCol[i6 + 3] = r; lCol[i6 + 4] = g; lCol[i6 + 5] = b;
+
+          lineIdx++;
+        }
+      }
+    }
+    lineGeometry.setDrawRange(0, lineIdx * 2);
+    lineGeometry.attributes.position.needsUpdate = true;
+    lineGeometry.attributes.color.needsUpdate = true;
+
+    // Actualizar paquetes de datos que viajan entre nodos
+    const pPos = packetGeom.attributes.position.array;
+    for (let i = 0; i < packetCount; i++) {
+      const p = packets[i];
+      p.progress += p.speed * surgeSpeed;
+      if (p.progress >= 1.0) {
+        p.progress = 0;
+        p.startIdx = p.endIdx;
+        p.endIdx = Math.floor(Math.random() * nodeCount);
+      }
+      const n1 = nodes[p.startIdx];
+      const n2 = nodes[p.endIdx];
+      if (n1 && n2) {
+        pPos[i * 3] = n1.x + (n2.x - n1.x) * p.progress;
+        pPos[i * 3 + 1] = n1.y + (n2.y - n1.y) * p.progress;
+        pPos[i * 3 + 2] = n1.z + (n2.z - n1.z) * p.progress;
+      }
+    }
+    packetGeom.attributes.position.needsUpdate = true;
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+})();
+
+// Fallback Canvas 2D en caso de que Three.js no se cargue
+function initCanvas2DFallback(canvas, container) {
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = container.clientWidth || window.innerWidth;
+  let height = canvas.height = container.clientHeight || 600;
+
+  const points = [];
+  for (let i = 0; i < 60; i++) {
+    points.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: Math.random() * 3 + 2
+    });
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = '#E8A33D';
+    ctx.strokeStyle = 'rgba(232, 163, 61, 0.2)';
+
+    for (let i = 0; i < points.length; i++) {
+      const p = points[i];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+
+      for (let j = i + 1; j < points.length; j++) {
+        const p2 = points[j];
+        const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+        if (dist < 100) {
+          ctx.lineWidth = 1 - dist / 100;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+}
+
+// Interactive 3D tilt on problem visual card
+(function initArchCardInteraction() {
+  const card = document.getElementById('archCardVisual');
+  if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let bounds;
+  function updateBounds() {
+    bounds = card.getBoundingClientRect();
+  }
+
+  function onMouseMove(e) {
+    if (!bounds) updateBounds();
+    const mouseX = e.clientX - bounds.left;
+    const mouseY = e.clientY - bounds.top;
+    const xPct = (mouseX / bounds.width - 0.5) * 2;
+    const yPct = (mouseY / bounds.height - 0.5) * 2;
+    const rotateX = -yPct * 6;
+    const rotateY = xPct * 6;
+    card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+  }
+
+  function onMouseEnter() {
+    updateBounds();
+  }
+
+  function onMouseLeave() {
+    card.style.transform = '';
+  }
+
+  card.addEventListener('mouseenter', onMouseEnter);
+  card.addEventListener('mousemove', onMouseMove);
+  card.addEventListener('mouseleave', onMouseLeave);
+  window.addEventListener('resize', updateBounds);
+})();
+</script>
+</body>
+</html>
